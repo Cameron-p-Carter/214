@@ -21,8 +21,8 @@
             <tbody>
                 {% for flight in user.getFlights() %}
                     <tr>
-                        <td>{{ flight.getFlighteName() }}</td>
-                        <td>{{ flight.getSeatNumber() }}</td>
+                        <td>{{ flight.getFlightName() }}</td>
+                        <td>{{ flight.getFlightSeatNumber() }}</td>
                         <td>{{ flight.getFlightTime() }}</td>
                     </tr>
                 {% endfor %}
