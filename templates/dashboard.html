@@ -4,10 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Dashboard</title>
-
+    <title>User Dashboard</title>
 </head>
 <body>
+    <div class="dashboard-container">
+        <h1>Welcome, {{ user.getUserName() }}!</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Flight Name</th>
+                    <th>Seat Number</th>
+                    <th>Flight Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for flight in user.getFlights() %}
+                    <tr>
+                        <td>{{ flight.getFlighteName() }}</td>
+                        <td>{{ flight.getSeatNumber() }}</td>
+                        <td>{{ flight.getFlightTime() }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
+        <button id="toggleForm">Add Flight</button>
+
+        <!-- initially hidden -->
+        <form id="addFlightForm" action="{{ url_for('dashboard') }}" method="post" style="display: none;">
+            <label for="flight_name">Flight Name:</label>
+            <input type="text" id="flight_name" name="flight_name" required>
+            <label for="flight_seat_number">Username:</label>
+            <input type="text" id="flight_seat_number" name="flight_seat_number" required>
+            <label for="flight_time">Password:</label>
+            <input type="password" id="flight_time" name="flight_time" required>
+            <button type="submit" style="background-color: #3498db; color: #fff;">Confirm</button>
+        </form>
+
+        <p><a href="{{ url_for('index') }}">Back to Login</a></p>
+    </div>
+
+    <script>
+        // JS that toggles visibility of the form
+        document.getElementById('toggleForm').addEventListener('click', function() {
+            var form = document.getElementById('addFlightForm');
+            form.style.display = (form.style.display === 'none' || form.style.display === '') ? 'block' : 'none';
+        });
+    </script>
 </body>
 </html>
