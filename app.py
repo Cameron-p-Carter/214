@@ -103,8 +103,8 @@ manager.loadDataFromJsonFile()
 
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def login():
+    return render_template('login.html')
 
 
 @app.route('/login', methods=['POST'])
@@ -121,7 +121,7 @@ def login():
         }
         return redirect(url_for('dashboard'))
     else:
-        return render_template('index.html', error_message="Incorrect username or password")
+        return render_template('login.html', error_message="Incorrect username or password")
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -131,7 +131,7 @@ def register():
         password = request.form['password']
         manager.createUser(username, password)
         manager.saveDataToJsonFile()
-        return redirect(url_for('index'))
+        return redirect(url_for('login'))
     return render_template('register.html')
 
 
@@ -139,7 +139,7 @@ def register():
 def dashboard():
     user_data = session.get('user')
     if not user_data:
-        return redirect(url_for('index'))
+        return redirect(url_for('login'))
 
     user = User(user_data['user_name'], user_data['user_password'])
     for flight_data in user_data['flights']:
