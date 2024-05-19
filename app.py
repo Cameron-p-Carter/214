@@ -80,6 +80,7 @@ class Manager:
 
     def addFlightForUser(self, user, flight_id):
         user.addFlightBooking(flight_id)
+        self.saveUsers('userdata.json')
 
     def loadUsers(self, file_path):
         with open(file_path, 'r') as file:
@@ -148,7 +149,19 @@ def register():
             return render_template('register.html', error_message='Username already exists.')
     return render_template('register.html')
 
-# Add additional routes for userFlights if necessary
+@app.route('/book', methods=['GET', 'POST'])
+def book():
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    
+    if request.method == 'POST':
+        flight_id = request.form['flight_id']
+        user = manager.findUserByUsername(session['username'])
+        manager.addFlightForUser(user, flight_id)
+        return redirect(url_for('dashboard'))
+
+    flights = manager._all_flights.values()
+    return render_template('booking.html', flights=flights)
 
 if __name__ == '__main__':
     app.run(debug=True)

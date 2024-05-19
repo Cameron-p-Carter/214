@@ -9,17 +9,15 @@
 <body>
     <div class="booking-container">
         <h1>Book a Flight</h1>
-
-        <form action="{{ url_for('booking') }}" method="post">
-            <label for="flight_id">Flight ID:</label>
+        <form action="{{ url_for('book') }}" method="post">
+            <label for="flight_id">Select a flight:</label>
             <select id="flight_id" name="flight_id" required>
                 {% for flight in flights %}
-                    <option value="{{ flight.getFlightId() }}">{{ flight.getFlightId() }} - {{ flight.getFlightDepartingLocation() }} to {{ flight.getFlightDestinationLocation() }}</option>
+                    <option value="{{ flight.getFlightId() }}">{{ flight.getFlightId() }} - {{ flight.getFlightDepartingLocation() }} to {{ flight.getFlightDestinationLocation() }} at {{ flight.getFlightTime() }} - ${{ flight.getFlightPrice() }}</option>
                 {% endfor %}
             </select>
             <button type="submit">Book Flight</button>
         </form>
-        <p><a href="{{ url_for('dashboard') }}">Back to Dashboard</a></p>
     </div>
 </body>
 </html>
