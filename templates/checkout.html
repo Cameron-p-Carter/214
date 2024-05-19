@@ -12,29 +12,72 @@
             padding: 20px;
             text-align: center;
         }
-        .checkout-details {
+        .flight-details {
             margin-bottom: 20px;
         }
-        .checkout-details p {
+        .flight-details p {
             font-size: 18px;
         }
+        .seat-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .seat-box {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px;
+            width: 100px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .seat-box:hover {
+            background-color: #f9f9f9;
+        }
+        .seat-box input {
+            display: none;
+        }
+        .seat-box.selected {
+            background-color: #e0f7fa;
+        }
         .checkout-button {
+            margin-top: 20px;
             padding: 10px 20px;
         }
     </style>
+    <script>
+        function selectSeat(element) {
+            var seatBoxes = document.getElementsByClassName('seat-box');
+            for (var i = 0; i < seatBoxes.length; i++) {
+                seatBoxes[i].classList.remove('selected');
+                seatBoxes[i].getElementsByTagName('input')[0].checked = false;
+            }
+            element.classList.add('selected');
+            element.getElementsByTagName('input')[0].checked = true;
+        }
+    </script>
 </head>
 <body>
     <div class="checkout-container">
         <h1>Checkout</h1>
-        <div class="checkout-details">
-            <p>Flight ID: {{ flight.getFlightId() }}</p>
-            <p>From: {{ flight.getFlightDepartingLocation() }}</p>
-            <p>To: {{ flight.getFlightDestinationLocation() }}</p>
-            <p>Date and Time: {{ flight.getFlightTime() }}</p>
-            <p>Price: ${{ flight.getFlightPrice() }}</p>
+        <div class="flight-details">
+            <p><strong>Flight ID:</strong> {{ flight.getFlightId() }}</p>
+            <p><strong>From:</strong> {{ flight.getFlightDepartingLocation() }}</p>
+            <p><strong>To:</strong> {{ flight.getFlightDestinationLocation() }}</p>
+            <p><strong>Date and Time:</strong> {{ flight.getFlightTime() }}</p>
+            <p><strong>Price:</strong> ${{ flight.getFlightPrice() }}</p>
         </div>
-        <form action="{{ url_for('confirm_booking') }}" method="post">
+        <form action="{{ url_for('confirm_booking') }}" method="post" class="seat-list">
             <input type="hidden" name="flight_id" value="{{ flight.getFlightId() }}">
+            <div class="seat-list">
+                {% for seat in flight.getFlightAvailableSeats() %}
+                <label class="seat-box" onclick="selectSeat(this)">
+                    <input type="radio" name="seat" value="{{ seat }}">
+                    <p>{{ seat }}</p>
+                </label>
+                {% endfor %}
+            </div>
             <button type="submit" class="checkout-button">Confirm Booking</button>
         </form>
     </div>

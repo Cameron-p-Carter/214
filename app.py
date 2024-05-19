@@ -16,8 +16,8 @@ class User:
     def getUserPassword(self):
         return self._user_password
 
-    def addFlightBooking(self, x):
-        self._flight_booked_ids.append(x)
+    def addFlightBooking(self, flight_id, seat_number):
+        self._flight_booked_ids.append({"flight_id": flight_id, "seat_number": seat_number})
 
     def getFlightBookingIds(self):
         return self._flight_booked_ids
@@ -78,8 +78,8 @@ class Manager:
                 return user
         return None
 
-    def addFlightForUser(self, user, flight_id):
-        user.addFlightBooking(flight_id)
+    def addFlightForUser(self, user, flight_id, seat_number):
+        user.addFlightBooking(flight_id, seat_number)
         self.saveUsers('userdata.json')
 
     def loadUsers(self, file_path):
@@ -172,9 +172,24 @@ def confirm_booking():
         return redirect(url_for('login'))
     
     flight_id = request.form['flight_id']
+    seat = request.form['seat']
     user = manager.findUserByUsername(session['username'])
-    manager.addFlightForUser(user, flight_id)
+    manager.addFlightForUser(user, flight_id, seat)
     return redirect(url_for('dashboard'))
+
+@app.route('/my_bookings')
+def my_bookings():
+    if 'username' not in session:
+        return redirect(url_for('login'))
+
+    user = manager.findUserByUsername(session['username'])
+    bookings = [
+        {
+            "flight": manager._all_flights[booking["flight_id"]],
+            "seat": booking["seat_number"]
+        } for booking in user.getFlightBookingIds()
+    ]
+    return render_template('myBookings.html', bookings=bookings)
 
 if __name__ == '__main__':
     app.run(debug=True)

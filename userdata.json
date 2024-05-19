@@ -4,9 +4,46 @@
             "username": "test",
             "password": "test",
             "flight_booked_ids": [
-                "BA456",
-                "CX124",
-                "SQ109"
+                {
+                    "flight_id": "BA456",
+                    "seat_number": "A1"
+                },
+                {
+                    "flight_id": "CX124",
+                    "seat_number": "B2"
+                },
+                {
+                    "flight_id": "SQ109",
+                    "seat_number": "C3"
+                },
+                {
+                    "flight_id": "AF112",
+                    "seat_number": "D4"
+                },
+                {
+                    "flight_id": "EK122",
+                    "seat_number": "E5"
+                },
+                {
+                    "flight_id": "AA123",
+                    "seat_number": "F6"
+                },
+                {
+                    "flight_id": "CX124",
+                    "seat_number": "E1"
+                },
+                {
+                    "flight_id": "CX116",
+                    "seat_number": "E2"
+                },
+                {
+                    "flight_id": "DL789",
+                    "seat_number": "E2"
+                },
+                {
+                    "flight_id": "SQ125",
+                    "seat_number": "B2"
+                }
             ]
         },
         {
@@ -18,10 +55,22 @@
             "username": "UH",
             "password": "uh",
             "flight_booked_ids": [
-                "AA123",
-                "DL789",
-                "EK122",
-                "EK122"
+                {
+                    "flight_id": "AA123",
+                    "seat_number": "A1"
+                },
+                {
+                    "flight_id": "DL789",
+                    "seat_number": "B2"
+                },
+                {
+                    "flight_id": "EK122",
+                    "seat_number": "C3"
+                },
+                {
+                    "flight_id": "EK122",
+                    "seat_number": "D4"
+                }
             ]
         }
     ]
