@@ -5,11 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>Book a Flight</title>
+    <style>
+        .booking-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .flight-search {
+            margin-bottom: 20px;
+        }
+        .flight-search input, .flight-search button {
+            padding: 10px;
+            margin: 5px;
+        }
+        .flight-list select {
+            width: 100%;
+            padding: 10px;
+        }
+        .flight-list button {
+            margin-top: 20px;
+            padding: 10px 20px;
+        }
+    </style>
+    <script>
+        function filterFlights() {
+            var startLocation = document.getElementById('startLocation').value.toLowerCase();
+            var endLocation = document.getElementById('endLocation').value.toLowerCase();
+            var flightOptions = document.getElementById('flight_id').options;
+            
+            for (var i = 0; i < flightOptions.length; i++) {
+                var flightText = flightOptions[i].text.toLowerCase();
+                var parts = flightText.split(' - ')[1].split(' to ');
+                var departure = parts[0];
+                var destination = parts[1].split(' at ')[0];
+                
+                if ((departure.includes(startLocation) || startLocation === '') &&
+                    (destination.includes(endLocation) || endLocation === '')) {
+                    flightOptions[i].style.display = '';
+                } else {
+                    flightOptions[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="booking-container">
         <h1>Book a Flight</h1>
-        <form action="{{ url_for('book') }}" method="post">
+        <div class="flight-search">
+            <input type="text" id="startLocation" placeholder="Start Location" onkeyup="filterFlights()">
+            <input type="text" id="endLocation" placeholder="End Location" onkeyup="filterFlights()">
+        </div>
+        <form action="{{ url_for('book') }}" method="post" class="flight-list">
             <label for="flight_id">Select a flight:</label>
             <select id="flight_id" name="flight_id" required>
                 {% for flight in flights %}

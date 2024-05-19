@@ -3,8 +3,8 @@
         "flight_id": "AA123",
         "flight_gate_number": "G12",
         "flight_time": "2024-05-20T10:30:00",
-        "flight_departing_location": "JFK",
-        "flight_destination_location": "LAX",
+        "flight_departing_location": "Sydney",
+        "flight_destination_location": "Melbourne",
         "flight_price": 350.0,
         "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
     },
@@ -12,8 +12,8 @@
         "flight_id": "BA456",
         "flight_gate_number": "A5",
         "flight_time": "2024-05-21T15:00:00",
-        "flight_departing_location": "LHR",
-        "flight_destination_location": "JFK",
+        "flight_departing_location": "Melbourne",
+        "flight_destination_location": "Sydney",
         "flight_price": 450.0,
         "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
     },
@@ -21,9 +21,234 @@
         "flight_id": "DL789",
         "flight_gate_number": "C3",
         "flight_time": "2024-05-22T18:45:00",
-        "flight_departing_location": "ATL",
-        "flight_destination_location": "ORD",
+        "flight_departing_location": "Brisbane",
+        "flight_destination_location": "Perth",
         "flight_price": 250.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "UA101",
+        "flight_gate_number": "B7",
+        "flight_time": "2024-05-23T09:00:00",
+        "flight_departing_location": "Perth",
+        "flight_destination_location": "Brisbane",
+        "flight_price": 200.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "SW102",
+        "flight_gate_number": "D1",
+        "flight_time": "2024-05-24T11:15:00",
+        "flight_departing_location": "Adelaide",
+        "flight_destination_location": "Hobart",
+        "flight_price": 180.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "AC103",
+        "flight_gate_number": "E2",
+        "flight_time": "2024-05-25T13:20:00",
+        "flight_departing_location": "Hobart",
+        "flight_destination_location": "Adelaide",
+        "flight_price": 400.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "AF104",
+        "flight_gate_number": "F5",
+        "flight_time": "2024-05-26T17:30:00",
+        "flight_departing_location": "Darwin",
+        "flight_destination_location": "Canberra",
+        "flight_price": 700.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "LH105",
+        "flight_gate_number": "G8",
+        "flight_time": "2024-05-27T19:45:00",
+        "flight_departing_location": "Canberra",
+        "flight_destination_location": "Darwin",
+        "flight_price": 650.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "EK106",
+        "flight_gate_number": "H2",
+        "flight_time": "2024-05-28T23:55:00",
+        "flight_departing_location": "Sydney",
+        "flight_destination_location": "Brisbane",
+        "flight_price": 300.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "QR107",
+        "flight_gate_number": "I3",
+        "flight_time": "2024-05-29T02:00:00",
+        "flight_departing_location": "Brisbane",
+        "flight_destination_location": "Sydney",
+        "flight_price": 300.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "CX108",
+        "flight_gate_number": "J6",
+        "flight_time": "2024-05-30T06:15:00",
+        "flight_departing_location": "Melbourne",
+        "flight_destination_location": "Perth",
+        "flight_price": 450.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "SQ109",
+        "flight_gate_number": "K9",
+        "flight_time": "2024-05-31T08:25:00",
+        "flight_departing_location": "Perth",
+        "flight_destination_location": "Melbourne",
+        "flight_price": 450.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "QF110",
+        "flight_gate_number": "L12",
+        "flight_time": "2024-06-01T10:35:00",
+        "flight_departing_location": "Adelaide",
+        "flight_destination_location": "Darwin",
+        "flight_price": 500.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "BA111",
+        "flight_gate_number": "M5",
+        "flight_time": "2024-06-02T12:45:00",
+        "flight_departing_location": "Darwin",
+        "flight_destination_location": "Adelaide",
+        "flight_price": 500.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "AF112",
+        "flight_gate_number": "N8",
+        "flight_time": "2024-06-03T14:55:00",
+        "flight_departing_location": "Canberra",
+        "flight_destination_location": "Hobart",
+        "flight_price": 400.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "LH113",
+        "flight_gate_number": "O2",
+        "flight_time": "2024-06-04T17:05:00",
+        "flight_departing_location": "Hobart",
+        "flight_destination_location": "Canberra",
+        "flight_price": 400.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "EK114",
+        "flight_gate_number": "P4",
+        "flight_time": "2024-06-05T19:15:00",
+        "flight_departing_location": "Sydney",
+        "flight_destination_location": "Adelaide",
+        "flight_price": 350.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "QR115",
+        "flight_gate_number": "Q7",
+        "flight_time": "2024-06-06T21:25:00",
+        "flight_departing_location": "Adelaide",
+        "flight_destination_location": "Sydney",
+        "flight_price": 350.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "CX116",
+        "flight_gate_number": "R3",
+        "flight_time": "2024-06-07T23:35:00",
+        "flight_departing_location": "Melbourne",
+        "flight_destination_location": "Brisbane",
+        "flight_price": 370.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "SQ117",
+        "flight_gate_number": "S2",
+        "flight_time": "2024-06-08T05:45:00",
+        "flight_departing_location": "Brisbane",
+        "flight_destination_location": "Melbourne",
+        "flight_price": 370.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "QF118",
+        "flight_gate_number": "T5",
+        "flight_time": "2024-06-09T08:55:00",
+        "flight_departing_location": "Hobart",
+        "flight_destination_location": "Perth",
+        "flight_price": 480.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "BA119",
+        "flight_gate_number": "U6",
+        "flight_time": "2024-06-10T11:05:00",
+        "flight_departing_location": "Perth",
+        "flight_destination_location": "Hobart",
+        "flight_price": 480.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "AF120",
+        "flight_gate_number": "V8",
+        "flight_time": "2024-06-11T13:15:00",
+        "flight_departing_location": "Canberra",
+        "flight_destination_location": "Brisbane",
+        "flight_price": 320.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "LH121",
+        "flight_gate_number": "W2",
+        "flight_time": "2024-06-12T15:25:00",
+        "flight_departing_location": "Brisbane",
+        "flight_destination_location": "Canberra",
+        "flight_price": 320.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "EK122",
+        "flight_gate_number": "X4",
+        "flight_time": "2024-06-13T17:35:00",
+        "flight_departing_location": "Sydney",
+        "flight_destination_location": "Darwin",
+        "flight_price": 420.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "QR123",
+        "flight_gate_number": "Y3",
+        "flight_time": "2024-06-14T19:45:00",
+        "flight_departing_location": "Darwin",
+        "flight_destination_location": "Sydney",
+        "flight_price": 420.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "CX124",
+        "flight_gate_number": "Z6",
+        "flight_time": "2024-06-15T21:55:00",
+        "flight_departing_location": "Melbourne",
+        "flight_destination_location": "Canberra",
+        "flight_price": 280.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "SQ125",
+        "flight_gate_number": "A1",
+        "flight_time": "2024-06-16T23:05:00",
+        "flight_departing_location": "Canberra",
+        "flight_destination_location": "Melbourne",
+        "flight_price": 280.0,
         "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
     }
 ]

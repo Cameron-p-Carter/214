@@ -4,7 +4,8 @@
             "username": "test",
             "password": "test",
             "flight_booked_ids": [
-                "BA456"
+                "BA456",
+                "CX124"
             ]
         },
         {
