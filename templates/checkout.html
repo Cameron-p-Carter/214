@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Checkout</title>
+    <style>
+        .checkout-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .checkout-details {
+            margin-bottom: 20px;
+        }
+        .checkout-details p {
+            font-size: 18px;
+        }
+        .checkout-button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        <div class="checkout-details">
+            <p>Flight ID: {{ flight.getFlightId() }}</p>
+            <p>From: {{ flight.getFlightDepartingLocation() }}</p>
+            <p>To: {{ flight.getFlightDestinationLocation() }}</p>
+            <p>Date and Time: {{ flight.getFlightTime() }}</p>
+            <p>Price: ${{ flight.getFlightPrice() }}</p>
+        </div>
+        <form action="{{ url_for('confirm_booking') }}" method="post">
+            <input type="hidden" name="flight_id" value="{{ flight.getFlightId() }}">
+            <button type="submit" class="checkout-button">Confirm Booking</button>
+        </form>
+    </div>
+</body>
+</html>

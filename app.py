@@ -154,14 +154,27 @@ def book():
     if 'username' not in session:
         return redirect(url_for('login'))
     
-    if request.method == 'POST':
-        flight_id = request.form['flight_id']
-        user = manager.findUserByUsername(session['username'])
-        manager.addFlightForUser(user, flight_id)
-        return redirect(url_for('dashboard'))
-
     flights = manager._all_flights.values()
     return render_template('booking.html', flights=flights)
+
+@app.route('/checkout', methods=['POST'])
+def checkout():
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    
+    flight_id = request.form['flight_id']
+    flight = manager._all_flights[flight_id]
+    return render_template('checkout.html', flight=flight)
+
+@app.route('/confirm_booking', methods=['POST'])
+def confirm_booking():
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    
+    flight_id = request.form['flight_id']
+    user = manager.findUserByUsername(session['username'])
+    manager.addFlightForUser(user, flight_id)
+    return redirect(url_for('dashboard'))
 
 if __name__ == '__main__':
     app.run(debug=True)
