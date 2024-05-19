@@ -11,6 +11,14 @@
                 {
                     "flight_id": "AA123",
                     "seat_number": "A2"
+                },
+                {
+                    "flight_id": "AA123",
+                    "seat_number": "B2"
+                },
+                {
+                    "flight_id": "AA123",
+                    "seat_number": "C1"
                 }
             ]
         },

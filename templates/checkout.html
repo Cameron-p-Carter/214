@@ -41,6 +41,10 @@
         .seat-box.selected {
             background-color: #e0f7fa;
         }
+        .seat-box.unavailable {
+            background-color: #d3d3d3;
+            cursor: not-allowed;
+        }
         .checkout-button {
             margin-top: 20px;
             padding: 10px 20px;
@@ -48,6 +52,9 @@
     </style>
     <script>
         function selectSeat(element) {
+            if (element.classList.contains('unavailable')) {
+                return;
+            }
             var seatBoxes = document.getElementsByClassName('seat-box');
             for (var i = 0; i < seatBoxes.length; i++) {
                 seatBoxes[i].classList.remove('selected');
@@ -71,11 +78,19 @@
         <form action="{{ url_for('confirm_booking') }}" method="post" class="seat-list">
             <input type="hidden" name="flight_id" value="{{ flight.getFlightId() }}">
             <div class="seat-list">
-                {% for seat in flight.getFlightAvailableSeats() %}
-                <label class="seat-box" onclick="selectSeat(this)">
-                    <input type="radio" name="seat" value="{{ seat }}">
-                    <p>{{ seat }}</p>
-                </label>
+                {% set default_seats = ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"] %}
+                {% for seat in default_seats %}
+                    {% if seat in flight.getFlightAvailableSeats() %}
+                        <label class="seat-box" onclick="selectSeat(this)">
+                            <input type="radio" name="seat" value="{{ seat }}">
+                            <p>{{ seat }}</p>
+                        </label>
+                    {% else %}
+                        <label class="seat-box unavailable">
+                            <input type="radio" name="seat" value="{{ seat }}" disabled>
+                            <p>{{ seat }}</p>
+                        </label>
+                    {% endif %}
                 {% endfor %}
             </div>
             <button type="submit" class="checkout-button">Confirm Booking</button>
