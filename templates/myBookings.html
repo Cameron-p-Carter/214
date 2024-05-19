@@ -22,6 +22,9 @@
     </style>
 </head>
 <body>
+    {% extends "base.html" %}
+    {% block title %}My Bookings{% endblock %}
+    {% block content %}
     <div class="bookings-container">
         <h1>My Bookings</h1>
         {% for booking in bookings %}
@@ -37,3 +40,4 @@
     </div>
 </body>
 </html>
+{% endblock %}

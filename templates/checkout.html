@@ -66,6 +66,9 @@
     </script>
 </head>
 <body>
+    {% extends "base.html" %}
+    {% block title %}Checkout{% endblock %}
+    {% block content %}
     <div class="checkout-container">
         <h1>Checkout</h1>
         <div class="flight-details">
@@ -98,3 +101,4 @@
     </div>
 </body>
 </html>
+{% endblock %}

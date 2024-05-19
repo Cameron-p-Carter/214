@@ -80,6 +80,9 @@
     </script>
 </head>
 <body>
+    {% extends "base.html" %}
+    {% block title %}Book a Flight{% endblock %}
+    {% block content %}
     <div class="booking-container">
         <h1>Book a Flight</h1>
         <div class="flight-search">
@@ -104,3 +107,4 @@
     </div>
 </body>
 </html>
+{% endblock %}

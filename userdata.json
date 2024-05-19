@@ -67,6 +67,16 @@
                     "seat_number": "A2"
                 }
             ]
+        },
+        {
+            "username": "qp",
+            "password": "qp",
+            "flight_booked_ids": [
+                {
+                    "flight_id": "BA119",
+                    "seat_number": "C1"
+                }
+            ]
         }
     ]
 }
