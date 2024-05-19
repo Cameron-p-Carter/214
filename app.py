@@ -77,9 +77,33 @@ class Manager:
     def addFlightForUser(self, user, flight_id):
         user.addFlight(flight_id)
 
+    def loadUsers(self, file_path):
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+            for user_data in data['users']:
+                user = User(user_data['username'], user_data['password'], user_data.get('flight_booked_ids', []))
+                self._all_users.append(user)
+
+    def loadFlights(self, file_path):
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+            for flight_data in data:
+                flight = Flight(
+                    flight_data['flight_id'],
+                    flight_data['flight_gate_number'],
+                    flight_data['flight_time'],
+                    flight_data['flight_departing_location'],
+                    flight_data['flight_destination_location'],
+                    flight_data['flight_price'],
+                    flight_data['flight_available_seats']
+                )
+                self._all_flights[flight_data['flight_id']] = flight
+
+
 app = Flask(__name__)
 manager = Manager()
-
+manager.loadUsers('userdata.json')
+manager.loadFlights('flightdata.json')
 
 
 app.secret_key = 'key'
