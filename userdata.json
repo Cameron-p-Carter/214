@@ -13,6 +13,16 @@
                     "seat_number": "A2"
                 }
             ]
+        },
+        {
+            "username": "test2",
+            "password": "test2",
+            "flight_booked_ids": [
+                {
+                    "flight_id": "AA123",
+                    "seat_number": "B1"
+                }
+            ]
         }
     ]
 }
