@@ -6,9 +6,7 @@
         "flight_departing_location": "Sydney",
         "flight_destination_location": "Melbourne",
         "flight_price": 350.0,
-        "flight_available_seats": [
-            "D1"
-        ]
+        "flight_available_seats": []
     },
     {
         "flight_id": "BA456",
@@ -19,7 +17,6 @@
         "flight_price": 450.0,
         "flight_available_seats": [
             "A1",
-            "A2",
             "B1",
             "B2",
             "C1",

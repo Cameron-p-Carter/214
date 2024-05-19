@@ -23,6 +23,10 @@
                 {
                     "flight_id": "AA123",
                     "seat_number": "C2"
+                },
+                {
+                    "flight_id": "AA123",
+                    "seat_number": "D1"
                 }
             ]
         },
@@ -51,6 +55,16 @@
                 {
                     "flight_id": "AA123",
                     "seat_number": "E1"
+                }
+            ]
+        },
+        {
+            "username": "new",
+            "password": "new",
+            "flight_booked_ids": [
+                {
+                    "flight_id": "BA456",
+                    "seat_number": "A2"
                 }
             ]
         }
