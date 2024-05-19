@@ -7,11 +7,7 @@
         "flight_destination_location": "Melbourne",
         "flight_price": 350.0,
         "flight_available_seats": [
-            "C2",
-            "D1",
-            "D2",
-            "E1",
-            "E2"
+            "D1"
         ]
     },
     {
