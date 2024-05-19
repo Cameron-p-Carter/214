@@ -1,0 +1,29 @@
+[
+    {
+        "flight_id": "AA123",
+        "flight_gate_number": "G12",
+        "flight_time": "2024-05-20T10:30:00",
+        "flight_departing_location": "JFK",
+        "flight_destination_location": "LAX",
+        "flight_price": 350.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "BA456",
+        "flight_gate_number": "A5",
+        "flight_time": "2024-05-21T15:00:00",
+        "flight_departing_location": "LHR",
+        "flight_destination_location": "JFK",
+        "flight_price": 450.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    },
+    {
+        "flight_id": "DL789",
+        "flight_gate_number": "C3",
+        "flight_time": "2024-05-22T18:45:00",
+        "flight_departing_location": "ATL",
+        "flight_destination_location": "ORD",
+        "flight_price": 250.0,
+        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+    }
+]

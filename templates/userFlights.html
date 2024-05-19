@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>User Dashboard</title>
+</head>
+<body>
+    <div class="userFlights-container">
+        <h1>Welcome, {{ user.getUserName() }}!</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Flight ID</th>
+                    <th>Gate Number</th>
+                    <th>Time</th>
+                    <th>Departing Location</th>
+                    <th>Destination Location</th>
+                    <th>Price</th>
+                    <th>Available Seats</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for flight in flights %}
+                    <tr>
+                        <td>{{ flight.getFlightId() }}</td>
+                        <td>{{ flight.getFlightGateNumber() }}</td>
+                        <td>{{ flight.getFlightTime() }}</td>
+                        <td>{{ flight.getFlightDepartingLocation() }}</td>
+                        <td>{{ flight.getFlightDestinationLocation() }}</td>
+                        <td>{{ flight.getFlightPrice() }}</td>
+                        <td>{{ flight.getFlightAvailableSeats() }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

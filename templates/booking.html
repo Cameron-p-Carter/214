@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Book a Flight</title>
+</head>
+<body>
+    <div class="booking-container">
+        <h1>Book a Flight</h1>
+
+        <form action="{{ url_for('booking') }}" method="post">
+            <label for="flight_id">Flight ID:</label>
+            <select id="flight_id" name="flight_id" required>
+                {% for flight in flights %}
+                    <option value="{{ flight.getFlightId() }}">{{ flight.getFlightId() }} - {{ flight.getFlightDepartingLocation() }} to {{ flight.getFlightDestinationLocation() }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Book Flight</button>
+        </form>
+        <p><a href="{{ url_for('dashboard') }}">Back to Dashboard</a></p>
+    </div>
+</body>
+</html>
