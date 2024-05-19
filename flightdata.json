@@ -6,7 +6,16 @@
         "flight_departing_location": "Sydney",
         "flight_destination_location": "Melbourne",
         "flight_price": 350.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "BA456",
@@ -15,7 +24,18 @@
         "flight_departing_location": "Melbourne",
         "flight_destination_location": "Sydney",
         "flight_price": 450.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "DL789",
@@ -24,7 +44,18 @@
         "flight_departing_location": "Brisbane",
         "flight_destination_location": "Perth",
         "flight_price": 250.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "UA101",
@@ -33,7 +64,18 @@
         "flight_departing_location": "Perth",
         "flight_destination_location": "Brisbane",
         "flight_price": 200.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "SW102",
@@ -42,7 +84,18 @@
         "flight_departing_location": "Adelaide",
         "flight_destination_location": "Hobart",
         "flight_price": 180.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "AC103",
@@ -51,7 +104,18 @@
         "flight_departing_location": "Hobart",
         "flight_destination_location": "Adelaide",
         "flight_price": 400.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "AF104",
@@ -60,7 +124,18 @@
         "flight_departing_location": "Darwin",
         "flight_destination_location": "Canberra",
         "flight_price": 700.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "LH105",
@@ -69,7 +144,18 @@
         "flight_departing_location": "Canberra",
         "flight_destination_location": "Darwin",
         "flight_price": 650.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "EK106",
@@ -78,7 +164,18 @@
         "flight_departing_location": "Sydney",
         "flight_destination_location": "Brisbane",
         "flight_price": 300.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "QR107",
@@ -87,7 +184,18 @@
         "flight_departing_location": "Brisbane",
         "flight_destination_location": "Sydney",
         "flight_price": 300.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "CX108",
@@ -96,7 +204,18 @@
         "flight_departing_location": "Melbourne",
         "flight_destination_location": "Perth",
         "flight_price": 450.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "SQ109",
@@ -105,7 +224,18 @@
         "flight_departing_location": "Perth",
         "flight_destination_location": "Melbourne",
         "flight_price": 450.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "QF110",
@@ -114,7 +244,18 @@
         "flight_departing_location": "Adelaide",
         "flight_destination_location": "Darwin",
         "flight_price": 500.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "BA111",
@@ -123,7 +264,18 @@
         "flight_departing_location": "Darwin",
         "flight_destination_location": "Adelaide",
         "flight_price": 500.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "AF112",
@@ -132,7 +284,18 @@
         "flight_departing_location": "Canberra",
         "flight_destination_location": "Hobart",
         "flight_price": 400.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "LH113",
@@ -141,7 +304,18 @@
         "flight_departing_location": "Hobart",
         "flight_destination_location": "Canberra",
         "flight_price": 400.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "EK114",
@@ -150,7 +324,18 @@
         "flight_departing_location": "Sydney",
         "flight_destination_location": "Adelaide",
         "flight_price": 350.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "QR115",
@@ -159,7 +344,18 @@
         "flight_departing_location": "Adelaide",
         "flight_destination_location": "Sydney",
         "flight_price": 350.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "CX116",
@@ -168,7 +364,18 @@
         "flight_departing_location": "Melbourne",
         "flight_destination_location": "Brisbane",
         "flight_price": 370.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "SQ117",
@@ -177,7 +384,18 @@
         "flight_departing_location": "Brisbane",
         "flight_destination_location": "Melbourne",
         "flight_price": 370.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "QF118",
@@ -186,7 +404,18 @@
         "flight_departing_location": "Hobart",
         "flight_destination_location": "Perth",
         "flight_price": 480.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "BA119",
@@ -195,7 +424,18 @@
         "flight_departing_location": "Perth",
         "flight_destination_location": "Hobart",
         "flight_price": 480.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "AF120",
@@ -204,7 +444,18 @@
         "flight_departing_location": "Canberra",
         "flight_destination_location": "Brisbane",
         "flight_price": 320.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "LH121",
@@ -213,7 +464,18 @@
         "flight_departing_location": "Brisbane",
         "flight_destination_location": "Canberra",
         "flight_price": 320.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "EK122",
@@ -222,7 +484,18 @@
         "flight_departing_location": "Sydney",
         "flight_destination_location": "Darwin",
         "flight_price": 420.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "QR123",
@@ -231,7 +504,18 @@
         "flight_departing_location": "Darwin",
         "flight_destination_location": "Sydney",
         "flight_price": 420.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "CX124",
@@ -240,7 +524,18 @@
         "flight_departing_location": "Melbourne",
         "flight_destination_location": "Canberra",
         "flight_price": 280.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     },
     {
         "flight_id": "SQ125",
@@ -249,6 +544,17 @@
         "flight_departing_location": "Canberra",
         "flight_destination_location": "Melbourne",
         "flight_price": 280.0,
-        "flight_available_seats": ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"]
+        "flight_available_seats": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1",
+            "C2",
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+        ]
     }
 ]

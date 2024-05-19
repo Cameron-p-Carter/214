@@ -56,6 +56,9 @@ class Flight:
     def getFlightAvailableSeats(self):
         return self._flight_available_seats
 
+    def removeSeat(self, seat_number):
+        self._flight_available_seats.remove(seat_number)
+
 class Manager:
     def __init__(self):
         self._all_users = []
@@ -81,6 +84,7 @@ class Manager:
     def addFlightForUser(self, user, flight_id, seat_number):
         user.addFlightBooking(flight_id, seat_number)
         self.saveUsers('userdata.json')
+        self.saveFlights('flightdata.json')
 
     def loadUsers(self, file_path):
         with open(file_path, 'r') as file:
@@ -114,6 +118,21 @@ class Manager:
                     flight_data['flight_available_seats']
                 )
                 self._all_flights[flight_data['flight_id']] = flight
+
+    def saveFlights(self, file_path):
+        with open(file_path, 'w') as file:
+            data = []
+            for flight in self._all_flights.values():
+                data.append({
+                    'flight_id': flight.getFlightId(),
+                    'flight_gate_number': flight.getFlightGateNumber(),
+                    'flight_time': flight.getFlightTime(),
+                    'flight_departing_location': flight.getFlightDepartingLocation(),
+                    'flight_destination_location': flight.getFlightDestinationLocation(),
+                    'flight_price': flight.getFlightPrice(),
+                    'flight_available_seats': flight.getFlightAvailableSeats()
+                })
+            json.dump(data, file, indent=4)
 
 manager = Manager()
 manager.loadUsers('userdata.json')
@@ -174,6 +193,7 @@ def confirm_booking():
     flight_id = request.form['flight_id']
     seat = request.form['seat']
     user = manager.findUserByUsername(session['username'])
+    manager._all_flights[flight_id].removeSeat(seat)
     manager.addFlightForUser(user, flight_id, seat)
     return redirect(url_for('dashboard'))
 
