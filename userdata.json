@@ -17,7 +17,12 @@
         {
             "username": "UH",
             "password": "uh",
-            "flight_booked_ids": []
+            "flight_booked_ids": [
+                "AA123",
+                "DL789",
+                "EK122",
+                "EK122"
+            ]
         }
     ]
 }
