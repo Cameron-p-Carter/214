@@ -1,1 +1,14 @@
-{"users": [{"username": "test", "password": "test", "flights": [{"flight_id": "BA456"}]}]}
+{
+    "users": [
+        {
+            "username": "test",
+            "password": "test",
+            "flight_booked_ids": []
+        },
+        {
+            "username": "2",
+            "password": "4",
+            "flight_booked_ids": []
+        }
+    ]
+}

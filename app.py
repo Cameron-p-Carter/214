@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import json
 
+app = Flask(__name__)
+app.secret_key = 'key'
+
 class User:
-    def __init__(self, user_name, user_password):
+    def __init__(self, user_name, user_password, flight_booked_ids=None):
         self._user_name = user_name
         self._user_password = user_password
-        self._flight_booked_ids = []
+        self._flight_booked_ids = flight_booked_ids or []
 
     def getUserName(self):
         return self._user_name
@@ -23,14 +26,14 @@ class User:
         return self._flight_booked_ids[x]
 
 class Flight:
-    def __init__(self, flight_id, flight_gate_number, flight_time, flight_departing_location, flight_destination_location, flight_price):
+    def __init__(self, flight_id, flight_gate_number, flight_time, flight_departing_location, flight_destination_location, flight_price, flight_available_seats):
         self._flight_id = flight_id
         self._flight_gate_number = flight_gate_number
         self._flight_time = flight_time
         self._flight_departing_location = flight_departing_location
         self._flight_destination_location = flight_destination_location
         self._flight_price = flight_price
-        self._flight_available_seats = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        self._flight_available_seats = flight_available_seats
 
     def getFlightId(self):
         return self._flight_id
@@ -61,6 +64,7 @@ class Manager:
     def createUser(self, user_name, user_password):
         new_user = User(user_name, user_password)
         self._all_users.append(new_user)
+        self.saveUsers('userdata.json')
 
     def findUserByUsername(self, user_name):
         for user in self._all_users:
@@ -75,7 +79,7 @@ class Manager:
         return None
 
     def addFlightForUser(self, user, flight_id):
-        user.addFlight(flight_id)
+        user.addFlightBooking(flight_id)
 
     def loadUsers(self, file_path):
         with open(file_path, 'r') as file:
@@ -83,6 +87,17 @@ class Manager:
             for user_data in data['users']:
                 user = User(user_data['username'], user_data['password'], user_data.get('flight_booked_ids', []))
                 self._all_users.append(user)
+
+    def saveUsers(self, file_path):
+        with open(file_path, 'w') as file:
+            data = {'users': []}
+            for user in self._all_users:
+                data['users'].append({
+                    'username': user.getUserName(),
+                    'password': user.getUserPassword(),
+                    'flight_booked_ids': user.getFlightBookingIds()
+                })
+            json.dump(data, file, indent=4)
 
     def loadFlights(self, file_path):
         with open(file_path, 'r') as file:
@@ -99,14 +114,41 @@ class Manager:
                 )
                 self._all_flights[flight_data['flight_id']] = flight
 
-
-app = Flask(__name__)
 manager = Manager()
 manager.loadUsers('userdata.json')
 manager.loadFlights('flightdata.json')
 
+@app.route('/')
+def dashboard():
+    return render_template('dashboard.html')
 
-app.secret_key = 'key'
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        user = manager.authenticateUser(username, password)
+        if user:
+            session['username'] = username
+            return redirect(url_for('dashboard'))
+        else:
+            return render_template('login.html', error_message='Invalid username or password.')
+    return render_template('login.html')
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        if manager.findUserByUsername(username) is None:
+            manager.createUser(username, password)
+            session['username'] = username
+            return redirect(url_for('dashboard'))
+        else:
+            return render_template('register.html', error_message='Username already exists.')
+    return render_template('register.html')
+
+# Add additional routes for userFlights if necessary
 
 if __name__ == '__main__':
     app.run(debug=True)
