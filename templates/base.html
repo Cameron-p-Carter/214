@@ -17,10 +17,17 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            margin-right: 50px;
         }
         .navbar a:hover {
             background-color: #d9d2e9;
             color: black;
+        }
+        #home {
+            margin-right: 500px;
+        }
+        #login {
+            margin-left: 250px;
         }
         .content {
             padding: 20px;
@@ -29,11 +36,12 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="{{ url_for('dashboard') }}">Home</a>
-        <a href="{{ url_for('login') }}">Login</a>
-        <a href="{{ url_for('register') }}">Register</a>
+        <a id="home" href="{{ url_for('dashboard') }}">Home</a>
         <a href="{{ url_for('my_bookings') }}">My Flights</a>
         <a href="{{ url_for('book') }}">Booking</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a id="login" href="{{ url_for('register') }}">Register</a>
+        <a href="{{ url_for('login') }}">Login</a>
     </div>
     <div class="content">
         {% block content %}{% endblock %}
