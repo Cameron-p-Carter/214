@@ -13,21 +13,25 @@
         .navbar a {
             float: left;
             display: block;
-            color: #000000;
+            color: #371679;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            border-radius:20px;
+            font-family:'Lucida Sans';
+            font-size: larger;
             margin-right: 50px;
         }
         .navbar a:hover {
             background-color: #d9d2e9;
-            color: black;
+            color: #371679;
         }
         #home {
-            margin-right: 500px;
+            margin-right: 450px;
+            color: #6C34DA;
         }
         #login {
-            margin-left: 250px;
+            margin-left: 175px;
         }
         .content {
             padding: 20px;
@@ -36,7 +40,7 @@
 </head>
 <body>
     <div class="navbar">
-        <a id="home" href="{{ url_for('dashboard') }}">Home</a>
+        <a id="home" href="{{ url_for('dashboard') }}"><img src="images\logo.png" width="100px" height="100px"></img>Home</a>
         <a href="{{ url_for('my_bookings') }}">My Flights</a>
         <a href="{{ url_for('book') }}">Booking</a>
         <a href="{{ url_for('services') }}">Services</a>
