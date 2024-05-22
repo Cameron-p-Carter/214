@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>{% block title %}{% endblock %}</title>
-    <style>
-
-    </style>
 </head>
 <body>
     <div class="navbar">
-        <a id="home" href="{{ url_for('dashboard') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" width="100px" height="100px"></a>
-        <a href="{{ url_for('my_bookings') }}">My Flights</a>
-        <a href="{{ url_for('book') }}">Booking</a>
-        <a href="{{ url_for('services') }}">Services</a>
-        <a id="login" href="{{ url_for('register') }}">Register</a>
-        <a href="{{ url_for('login') }}">Login</a>
+        <div class="left-links">
+            <a id="home" href="{{ url_for('dashboard') }}">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" width="100px" height="100px"></a>
+            <a href="{{ url_for('my_bookings') }}">My Flights</a>
+            <a href="{{ url_for('book') }}">Booking</a>
+            <a href="{{ url_for('services') }}">Services</a>
+        </div>
+        <div class="right-links">
+            <a id="register" href="{{ url_for('register') }}">Register</a>
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
     </div>
     <div class="content">
         {% block content %}{% endblock %}

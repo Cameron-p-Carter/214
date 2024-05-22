@@ -12,20 +12,28 @@ body {
     background-color: #ffffff;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.navbar .left-links,
+.navbar .right-links {
+    display: flex;
+    align-items: center;
 }
 
 .navbar a {
-    float: left;
-    display: block;
     color: #371679;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 20px;
     text-decoration: none;
     border-radius: 20px;
     font-size: larger;
-    margin-right: 20px;
     transition: background-color 0.3s;
+    margin: 0 10px;
 }
 
 .navbar a:hover {
@@ -33,13 +41,9 @@ body {
     color: #371679;
 }
 
-#home {
+.navbar #home {
     margin-right: auto;
     color: #6C34DA;
-}
-
-#login {
-    margin-left: 175px;
 }
 
 /* Content Styles */
