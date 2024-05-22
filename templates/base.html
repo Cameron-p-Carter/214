@@ -40,7 +40,7 @@
 </head>
 <body>
     <div class="navbar">
-        <a id="home" href="{{ url_for('dashboard') }}"><img src="images\logo.png" width="100px" height="100px"></img>Home</a>
+        <a id="home" href="{{ url_for('dashboard') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" width="100px" height="100px">Home</a>
         <a href="{{ url_for('my_bookings') }}">My Flights</a>
         <a href="{{ url_for('book') }}">Booking</a>
         <a href="{{ url_for('services') }}">Services</a>
