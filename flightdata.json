@@ -113,7 +113,6 @@
         "flight_destination_location": "Canberra",
         "flight_price": 700.0,
         "flight_available_seats": [
-            "A1",
             "A2",
             "B1",
             "B2",

@@ -31,6 +31,10 @@
                 {
                     "flight_id": "SW102",
                     "seat_number": "A2"
+                },
+                {
+                    "flight_id": "AF104",
+                    "seat_number": "A1"
                 }
             ]
         },
