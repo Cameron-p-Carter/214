@@ -7,20 +7,31 @@
     <title>{% block title %}{% endblock %}</title>
     <style>
         .navbar {
-            background-color: #333;
+            background-color: #ffffff;
             overflow: hidden;
         }
         .navbar a {
             float: left;
             display: block;
-            color: #f2f2f2;
+            color: #371679;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            border-radius:20px;
+            font-family:'Lucida Sans';
+            font-size: larger;
+            margin-right: 50px;
         }
         .navbar a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #d9d2e9;
+            color: #371679;
+        }
+        #home {
+            margin-right: 450px;
+            color: #6C34DA;
+        }
+        #login {
+            margin-left: 175px;
         }
         .content {
             padding: 20px;
@@ -29,11 +40,12 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="{{ url_for('dashboard') }}">Home</a>
-        <a href="{{ url_for('login') }}">Login</a>
-        <a href="{{ url_for('register') }}">Register</a>
+        <a id="home" href="{{ url_for('dashboard') }}"><img src="images\logo.png" width="100px" height="100px"></img>Home</a>
         <a href="{{ url_for('my_bookings') }}">My Flights</a>
         <a href="{{ url_for('book') }}">Booking</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a id="login" href="{{ url_for('register') }}">Register</a>
+        <a href="{{ url_for('login') }}">Login</a>
     </div>
     <div class="content">
         {% block content %}{% endblock %}
