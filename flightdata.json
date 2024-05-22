@@ -21,7 +21,6 @@
             "B2",
             "C1",
             "C2",
-            "D1",
             "D2",
             "E1",
             "E2"
@@ -76,7 +75,6 @@
         "flight_price": 180.0,
         "flight_available_seats": [
             "A1",
-            "A2",
             "B1",
             "B2",
             "C1",
@@ -516,7 +514,6 @@
         "flight_available_seats": [
             "A1",
             "A2",
-            "B1",
             "B2",
             "C1",
             "C2",

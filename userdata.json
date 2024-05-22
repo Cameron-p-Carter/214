@@ -27,6 +27,10 @@
                 {
                     "flight_id": "AA123",
                     "seat_number": "D1"
+                },
+                {
+                    "flight_id": "SW102",
+                    "seat_number": "A2"
                 }
             ]
         },
@@ -75,6 +79,20 @@
                 {
                     "flight_id": "BA119",
                     "seat_number": "C1"
+                }
+            ]
+        },
+        {
+            "username": "aa",
+            "password": "aa",
+            "flight_booked_ids": [
+                {
+                    "flight_id": "CX124",
+                    "seat_number": "B1"
+                },
+                {
+                    "flight_id": "BA456",
+                    "seat_number": "D1"
                 }
             ]
         }

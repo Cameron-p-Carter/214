@@ -197,7 +197,7 @@ def confirm_booking():
     user = manager.findUserByUsername(session['username'])
     manager._all_flights[flight_id].removeSeat(seat)
     manager.addFlightForUser(user, flight_id, seat)
-    return redirect(url_for('dashboard'))
+    return redirect(url_for('my_bookings'))
 
 @app.route('/my_bookings')
 def my_bookings():
