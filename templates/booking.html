@@ -1,30 +1,13 @@
-{% extends "base.html" %}
-{% block title %}Book a Flight{% endblock %}
-{% block content %}
-    <div class="booking-container">
-        <h1>Book a Flight</h1>
-        <input type="text" id="startLocation" placeholder="Start Location" onkeyup="filterFlights()">
-        <input type="text" id="endLocation" placeholder="End Location" onkeyup="filterFlights()">
-        <form action="{{ url_for('checkout') }}" method="get">
-            <div class="flight-grid">
-                {% for flight in flights %}
-                    <div class="flight-box" data-flight="{{ flight.getFlightId() }} - {{ flight.getFlightDepartingLocation() }} to {{ flight.getFlightDestinationLocation() }} at {{ flight.getFlightTime() }} - ${{ flight.getFlightPrice() }}">
-                        <input type="radio" name="flight_id" value="{{ flight.getFlightId() }}">
-                        <div class="flight-header">
-                            <p><strong>Flight ID:</strong> {{ flight.getFlightId() }}</p>
-                        </div>
-                        <div class="flight-details">
-                            <p><strong>From:</strong> {{ flight.getFlightDepartingLocation() }}</p>
-                            <p><strong>To:</strong> {{ flight.getFlightDestinationLocation() }}</p>
-                            <p><strong>Date and Time:</strong> {{ flight.getFlightTime() }}</p>
-                            <p><strong>Price:</strong> ${{ flight.getFlightPrice() }}</p>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-            <button type="submit" class="submit-button">Book Flight</button>
-        </form>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Book a Flight</title>
+    <style>
+
+    </style>
     <script>
         function filterFlights() {
             var startLocation = document.getElementById('startLocation').value.toLowerCase();
@@ -45,5 +28,44 @@
                 }
             }
         }
+
+        function selectFlight(element) {
+            var flightBoxes = document.getElementsByClassName('flight-box');
+            for (var i = 0; i < flightBoxes.length; i++) {
+                flightBoxes[i].classList.remove('selected');
+                flightBoxes[i].getElementsByTagName('input')[0].checked = false;
+            }
+            element.classList.add('selected');
+            element.getElementsByTagName('input')[0].checked = true;
+        }
     </script>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block title %}Book a Flight{% endblock %}
+    {% block content %}
+    <div class="booking-container">
+        <h1>Book a Flight</h1>
+        <div class="flight-search">
+            <input type="text" id="startLocation" placeholder="Start Location" onkeyup="filterFlights()">
+            <input type="text" id="endLocation" placeholder="End Location" onkeyup="filterFlights()">
+        </div>
+        <form action="{{ url_for('checkout') }}" method="post" class="flight-list">
+            <div class="flight-list">
+                {% for flight in flights %}
+                <label class="flight-box" data-flight="{{ flight.getFlightId() }} - {{ flight.getFlightDepartingLocation() }} to {{ flight.getFlightDestinationLocation() }} at {{ flight.getFlightTime() }} - ${{ flight.getFlightPrice() }}" onclick="selectFlight(this)">
+                    <input type="radio" name="flight_id" value="{{ flight.getFlightId() }}">
+                    <p><strong>Flight ID:</strong> {{ flight.getFlightId() }}</p>
+                    <p><strong>From:</strong> {{ flight.getFlightDepartingLocation() }}</p>
+                    <p><strong>To:</strong> {{ flight.getFlightDestinationLocation() }}</p>
+                    <p><strong>Date and Time:</strong> {{ flight.getFlightTime() }}</p>
+                    <p><strong>Price:</strong> ${{ flight.getFlightPrice() }}</p>
+                </label>
+                {% endfor %}
+            </div>
+            <button type="submit" class="submit-button">Book Flight</button>
+        </form>
+    </div>
+</body>
+</html>
 {% endblock %}
