@@ -99,6 +99,24 @@
                     "seat_number": "D1"
                 }
             ]
+        },
+        {
+            "username": "t11",
+            "password": "t11",
+            "flight_booked_ids": [
+                {
+                    "flight_id": "BA456",
+                    "seat_number": "E1"
+                },
+                {
+                    "flight_id": "DL789",
+                    "seat_number": "A1"
+                },
+                {
+                    "flight_id": "UA101",
+                    "seat_number": "A1"
+                }
+            ]
         }
     ]
 }

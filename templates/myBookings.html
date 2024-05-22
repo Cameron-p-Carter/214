@@ -1,31 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>My Bookings</title>
-    <style>
-
-    </style>
-</head>
-<body>
-    {% extends "base.html" %}
-    {% block title %}My Bookings{% endblock %}
-    {% block content %}
+{% extends "base.html" %}
+{% block title %}My Bookings{% endblock %}
+{% block content %}
     <div class="bookings-container">
         <h1>My Bookings</h1>
-        {% for booking in bookings %}
-            <div class="booking-box">
-                <p><strong>Flight ID:</strong> {{ booking.flight.getFlightId() }}</p>
-                <p><strong>From:</strong> {{ booking.flight.getFlightDepartingLocation() }}</p>
-                <p><strong>To:</strong> {{ booking.flight.getFlightDestinationLocation() }}</p>
-                <p><strong>Date and Time:</strong> {{ booking.flight.getFlightTime() }}</p>
-                <p><strong>Price:</strong> ${{ booking.flight.getFlightPrice() }}</p>
-                <p><strong>Seat Number:</strong> {{ booking.seat }}</p>
-            </div>
-        {% endfor %}
+        <div class="booking-grid">
+            {% for booking in bookings %}
+                <div class="booking-box">
+                    <div class="booking-header">
+                        <p><strong>Flight ID:</strong> {{ booking.flight.getFlightId() }}</p>
+                    </div>
+                    <div class="booking-details">
+                        <p><strong>From:</strong> {{ booking.flight.getFlightDepartingLocation() }}</p>
+                        <p><strong>To:</strong> {{ booking.flight.getFlightDestinationLocation() }}</p>
+                        <p><strong>Date and Time:</strong> {{ booking.flight.getFlightTime() }}</p>
+                        <p><strong>Price:</strong> ${{ booking.flight.getFlightPrice() }}</p>
+                        <p><strong>Seat Number:</strong> {{ booking.seat }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-</body>
-</html>
 {% endblock %}

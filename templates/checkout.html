@@ -1,32 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Checkout</title>
-    <style>
-
-    </style>
-    <script>
-        function selectSeat(element) {
-            if (element.classList.contains('unavailable')) {
-                return;
-            }
-            var seatBoxes = document.getElementsByClassName('seat-box');
-            for (var i = 0; i < seatBoxes.length; i++) {
-                seatBoxes[i].classList.remove('selected');
-                seatBoxes[i].getElementsByTagName('input')[0].checked = false;
-            }
-            element.classList.add('selected');
-            element.getElementsByTagName('input')[0].checked = true;
-        }
-    </script>
-</head>
-<body>
-    {% extends "base.html" %}
-    {% block title %}Checkout{% endblock %}
-    {% block content %}
+{% extends "base.html" %}
+{% block title %}Checkout{% endblock %}
+{% block content %}
     <div class="checkout-container">
         <h1>Checkout</h1>
         <div class="flight-details">
@@ -38,7 +12,7 @@
         </div>
         <form action="{{ url_for('confirm_booking') }}" method="post" class="seat-list">
             <input type="hidden" name="flight_id" value="{{ flight.getFlightId() }}">
-            <div class="seat-list">
+            <div class="seat-grid">
                 {% set default_seats = ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"] %}
                 {% for seat in default_seats %}
                     {% if seat in flight.getFlightAvailableSeats() %}
@@ -57,6 +31,18 @@
             <button type="submit" class="checkout-button">Confirm Booking</button>
         </form>
     </div>
-</body>
-</html>
+    <script>
+        function selectSeat(element) {
+            if (element.classList.contains('unavailable')) {
+                return;
+            }
+            var seatBoxes = document.getElementsByClassName('seat-box');
+            for (var i = 0; i < seatBoxes.length; i++) {
+                seatBoxes[i].classList.remove('selected');
+                seatBoxes[i].getElementsByTagName('input')[0].checked = false;
+            }
+            element.classList.add('selected');
+            element.getElementsByTagName('input')[0].checked = true;
+        }
+    </script>
 {% endblock %}

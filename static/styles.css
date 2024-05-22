@@ -87,7 +87,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 1200px;
 }
 
 .login-container h1, .register-container h1, .booking-container h1, .checkout-container h1, .services-container h1 {
@@ -125,27 +125,40 @@ form button:hover {
     background-color: #6C34DA;
 }
 
-/* Booking Styles */
-.flight-box {
+/* Grid Styles */
+.flight-grid, .booking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+/* Box Styles */
+.flight-box, .booking-box {
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 15px;
-    margin: 10px;
     background-color: #f9f9f9;
-    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.flight-box:hover {
+.flight-box:hover, .booking-box:hover {
     background-color: #e0f7fa;
 }
 
-.flight-box input {
+.flight-box input, .booking-box input {
     display: none;
 }
 
-.flight-box.selected {
-    background-color: #e0f7fa;
+.flight-header, .booking-header {
+    background-color: #371679;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.flight-details p, .booking-details p {
+    margin: 5px 0;
 }
 
 /* Seat Styles */
@@ -154,7 +167,7 @@ form button:hover {
     border-radius: 10px;
     padding: 15px;
     margin: 10px;
-    width: 80px;
+    width: 60px;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -175,6 +188,15 @@ form button:hover {
 .seat-box.unavailable {
     background-color: #d3d3d3;
     cursor: not-allowed;
+}
+
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 200px;
 }
 
 /* Services Styles */
@@ -208,29 +230,13 @@ form button:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 1200px;
 }
 
 .bookings-container h1 {
     color: #371679;
     text-align: center;
     margin-bottom: 20px;
-}
-
-.booking-box {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0;
-    background-color: #f9f9f9;
-}
-
-.booking-header {
-    background-color: #371679;
-    color: #fff;
-    padding: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
 .booking-details p {

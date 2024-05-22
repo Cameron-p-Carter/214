@@ -22,7 +22,6 @@
             "C1",
             "C2",
             "D2",
-            "E1",
             "E2"
         ]
     },
@@ -34,7 +33,6 @@
         "flight_destination_location": "Perth",
         "flight_price": 250.0,
         "flight_available_seats": [
-            "A1",
             "A2",
             "B1",
             "B2",
@@ -54,7 +52,6 @@
         "flight_destination_location": "Brisbane",
         "flight_price": 200.0,
         "flight_available_seats": [
-            "A1",
             "A2",
             "B1",
             "B2",
