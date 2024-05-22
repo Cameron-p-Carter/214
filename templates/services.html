@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}In-Flight Services{% endblock %}
+{% block content %}
+    <div class="services-container">
+        <h1>In-Flight Services</h1>
+        <div class="service">
+            <h2>Meal Options</h2>
+            <p>Purchase a delicious in-flight meal to make your journey more enjoyable.</p>
+        </div>
+        <div class="service">
+            <h2>Extra Legroom</h2>
+            <p>Upgrade to an extra legroom seat for more comfort during your flight.</p>
+        </div>
+        <div class="service">
+            <h2>Wi-Fi Access</h2>
+            <p>Stay connected with our high-speed in-flight Wi-Fi service.</p>
+        </div>
+        <div class="service">
+            <h2>Premium Entertainment</h2>
+            <p>Access premium movies, TV shows, and music with our in-flight entertainment package.</p>
+        </div>
+        <div class="service">
+            <h2>Lounge Access</h2>
+            <p>Relax in our exclusive airport lounges before your flight.</p>
+        </div>
+    </div>
+    <style>
+        .services-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .service {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px;
+            text-align: left;
+        }
+    </style>
+{% endblock %}
