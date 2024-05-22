@@ -83,7 +83,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin: 20px auto;
-    max-width: 500px;
+    max-width: 800px;
 }
 
 .login-container h1, .register-container h1, .booking-container h1, .checkout-container h1, .services-container h1 {
@@ -181,8 +181,54 @@ form button:hover {
     margin: 10px;
     background-color: #f9f9f9;
     transition: background-color 0.3s;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
 }
 
 .services-container .service:hover {
     background-color: #e0f7fa;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* My Bookings Styles */
+.bookings-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.bookings-container h1 {
+    color: #371679;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.booking-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+}
+
+.booking-header {
+    background-color: #371679;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.booking-details p {
+    margin: 5px 0;
 }
