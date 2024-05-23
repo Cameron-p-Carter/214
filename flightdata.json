@@ -9,15 +9,12 @@
         "flight_available_seats": [
             "A2",
             "B1",
-            "B2",
             "C1",
             "C2",
-            "D1",
             "D2",
             "E1",
             "E2",
-            "F1",
-            "F2"
+            "F1"
         ]
     },
     {
@@ -31,11 +28,9 @@
             "A1",
             "A2",
             "B1",
-            "B2",
             "C1",
             "C2",
             "D1",
-            "D2",
             "E1",
             "E2",
             "F1",
@@ -51,7 +46,6 @@
         "flight_price": 250.0,
         "flight_available_seats": [
             "A1",
-            "A2",
             "B1",
             "B2",
             "C1",
@@ -205,7 +199,6 @@
         "flight_price": 300.0,
         "flight_available_seats": [
             "A1",
-            "A2",
             "B1",
             "B2",
             "C1",

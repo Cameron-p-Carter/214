@@ -7,6 +7,40 @@
                 {
                     "flight_id": "AA123",
                     "seat_number": "A1"
+                },
+                {
+                    "flight_id": "AA123",
+                    "seat_number": "F2"
+                },
+                {
+                    "flight_id": "BA456",
+                    "seat_number": "D2"
+                },
+                {
+                    "flight_id": "BA456",
+                    "seat_number": "B2"
+                },
+                {
+                    "flight_id": "AA123",
+                    "seat_number": "D1"
+                },
+                {
+                    "flight_id": "QR107",
+                    "seat_number": "A2"
+                },
+                {
+                    "flight_id": "DL789",
+                    "seat_number": "A2"
+                }
+            ]
+        },
+        {
+            "username": "new",
+            "password": "new",
+            "flight_booked_ids": [
+                {
+                    "flight_id": "AA123",
+                    "seat_number": "B2"
                 }
             ]
         }
