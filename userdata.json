@@ -35,6 +35,18 @@
                 {
                     "flight_id": "AF104",
                     "seat_number": "A1"
+                },
+                {
+                    "flight_id": "QR107",
+                    "seat_number": "D2"
+                },
+                {
+                    "flight_id": "BA119",
+                    "seat_number": "C2"
+                },
+                {
+                    "flight_id": "LH121",
+                    "seat_number": "E1"
                 }
             ]
         },
@@ -97,6 +109,16 @@
                 {
                     "flight_id": "BA456",
                     "seat_number": "D1"
+                }
+            ]
+        },
+        {
+            "username": "test5",
+            "password": "test5",
+            "flight_booked_ids": [
+                {
+                    "flight_id": "QR115",
+                    "seat_number": "C1"
                 }
             ]
         }
