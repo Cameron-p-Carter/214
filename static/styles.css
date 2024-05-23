@@ -87,7 +87,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 1500px;
 }
 
 .login-container h1, .register-container h1, .booking-container h1, .checkout-container h1, .services-container h1 {
@@ -176,12 +176,23 @@ form button:hover {
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 15px;
-    margin: 10px;
-    width: 80px;
-    text-align: center;
+    background-color: #f9f9f9;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: calc(20% - 10px); 
+    box-sizing: border-box;
+    min-width: 20px;
 }
+
+/* Add this to your styles.css */
+
+.seat-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
 
 .seat-box:hover {
     background-color: #f3e0fa;

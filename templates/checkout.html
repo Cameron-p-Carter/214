@@ -39,7 +39,7 @@
         <form action="{{ url_for('confirm_booking') }}" method="post" class="seat-list">
             <input type="hidden" name="flight_id" value="{{ flight.getFlightId() }}">
             <div class="seat-list">
-                {% set default_seats = ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2"] %}
+                {% set default_seats = ["A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2", "E1", "E2", "F1", "F2"] %}
                 {% for seat in default_seats %}
                     {% if seat in flight.getFlightAvailableSeats() %}
                         <label class="seat-box" onclick="selectSeat(this)">
